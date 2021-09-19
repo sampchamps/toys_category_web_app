@@ -1,0 +1,15 @@
+<!-- Edit Toy Form -->
+<h1>Edit Toy Detail</h1>
+
+<%= form_for @type, :url =>{:action => "update", :id =>@type} do |f| %>
+
+<p>Title: <%= f.text_field 'title' %></p>
+<p>Price: <%= f.text_field  'price' %></p>
+<p>Subject: <%= f.collection_select :category_id, Subject.all, :id, :name %></p>
+<p>Description<br/>
+
+<%= f.text_area 'description' %></p>
+<%= f.submit "Save changes" %>
+<% end %>
+
+<%= link_to 'Back', {:action => 'list' } %>

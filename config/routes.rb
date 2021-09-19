@@ -1,3 +1,4 @@
+# Toys end-point
 Rails.application.routes.draw do
    get 'toys/list'
    get 'toys/new'

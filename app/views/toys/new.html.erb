@@ -1,0 +1,20 @@
+<!-- Add New Toy -->
+<h1>Add new Toy</h1>
+
+<%= form_tag :action => 'create' do %>
+<p><label for = "toy_title">Title</label>:
+
+<%= text_field 'toys', 'title' %></p>
+<p><label for = "toy_price">Price</label>:
+
+<%= text_field 'toys', 'price' %></p>
+<p><label for = "toy_subject_id">Subject</label>:
+
+<%= collection_select(:toys, :category_id, @categories, :id, :name, prompt: true) %></p>
+<p><label for = "toy_description">Description</label><br/>
+
+<%= text_area 'toys', 'description' %></p>
+<%= submit_tag "Create" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'list'} %>

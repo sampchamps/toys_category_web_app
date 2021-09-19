@@ -1,0 +1,15 @@
+<!-- Show list of Toys and Categories -->
+<h1><%= @toy.title %></h1>
+
+<p>
+   <strong>Price: </strong> $<%= @toy.price %><br />
+   <strong>Category: </strong> <%= link_to @toy.category.name,
+:action => "show_categories", :id => @toy.category.id %><br />
+   <strong>Created Date:</strong> <%= @toy.created_at %><br />
+</p>
+
+<p><%= @toy.description %></p>
+
+<hr />
+
+<%= link_to 'Back', {:action => 'list'} %>
