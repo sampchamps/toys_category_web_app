@@ -8,9 +8,9 @@
 <p><label for = "toy_price">Price</label>:
 
 <%= text_field 'toys', 'price' %></p>
-<p><label for = "toy_subject_id">Subject</label>:
+<p><label for = "toy_subject_id">Type</label>:
 
-<%= collection_select(:toys, :category_id, @categories, :id, :name, prompt: true) %></p>
+<%= collection_select(:toys, :type_id, @types, :id, :name, prompt: true) %></p>
 <p><label for = "toy_description">Description</label><br/>
 
 <%= text_area 'toys', 'description' %></p>

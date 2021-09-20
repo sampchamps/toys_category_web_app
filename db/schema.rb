@@ -10,16 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_17_011238) do
+ActiveRecord::Schema.define(version: 2021_09_20_084426) do
 
   create_table "toys", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.string "title", limit: 32, null: false
+    t.float "price"
+    t.integer "type_id"
+    t.text "description"
+    t.datetime "created_at"
   end
 
   create_table "types", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
   end
 
 end

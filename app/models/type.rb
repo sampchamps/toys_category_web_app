@@ -1,3 +1,3 @@
 class Type < ApplicationRecord
-	has_many :types
+	has_many :toys
 end

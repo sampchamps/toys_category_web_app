@@ -1,8 +1,8 @@
 <!-- Show Category -->
-<h1><%= @category.name -%></h1>
+<h1><%= @type.name -%></h1>
 
 <ul>
-   <% @category.toys.each do |c| %>
+   <% @type.toys.each do |c| %>
    <li><%= link_to c.title, :action => "show", :id => c.id -%></li>
    <% end %>
 </ul>

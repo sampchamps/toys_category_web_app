@@ -1,16 +1,16 @@
 <!-- Shows list of Toys and Categories -->
-<ul id = "categories">
-   <% Toy.all.each do |c| %>
-   <li><%= link_to c.name, :action => "show_categories", :id => c.id %></li>
+<ul id = "types">
+   <% Type.all.each do |c| %>
+   <li><%= link_to c.name, :action => "show_types", :id => c.id %></li>
    <% end %>
 </ul>
 
-<% if @types.blank? %>
+<% if @toys.blank? %>
 <p>There are not any Toys currently in the system.</p>
 <% else %>
 <p>These are the current Toys in our system</p>
 
-<ul id = "types">
+<ul id = "toys">
    <% @toys.each do |c| %>
    <li>
    <%= link_to c.title, {:action => 'show', :id => c.id} -%>
@@ -24,4 +24,4 @@
 
 
 <% end %>
-<p><%= link_to "Add new Book", {:action => 'new' }%></p>
+<p><%= link_to "Add new Toy", {:action => 'new' }%></p>
