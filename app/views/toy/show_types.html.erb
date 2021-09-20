@@ -1,5 +1,8 @@
 <!-- Show Category -->
-<h1><%= @type.name -%></h1>
+<div class="alert alert-success">
+  <strong>Show Types of Category: </strong><%= @type.name -%>
+</div>
+<h1></h1>
 
 <ul>
    <% @type.toys.each do |c| %>

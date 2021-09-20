@@ -1,5 +1,8 @@
 <!-- Edit Toy Form -->
-<h1>Edit Toy Detail</h1>
+<div class="alert alert-success">
+  <strong>Edit Toy Detail</strong>
+</div>
+
 
 <%= form_for @toy, :url =>{:action => "update", :id =>@toy} do |f| %>
 

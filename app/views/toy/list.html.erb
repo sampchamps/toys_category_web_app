@@ -1,4 +1,7 @@
 <!-- Shows list of Toys and Categories -->
+<div class="alert alert-success">
+  <strong>Toy List.</strong> 
+</div>
 <ul id = "types">
    <% Type.all.each do |c| %>
    <li><%= link_to c.name, :action => "show_types", :id => c.id %></li>
@@ -6,9 +9,9 @@
 </ul>
 
 <% if @toys.blank? %>
-<p>There are not any Toys currently in the system.</p>
+<h3>There are not any Toys currently in the system.</h3>
 <% else %>
-<p>These are the current Toys in our system</p>
+<h3>These are the current Toys in our system</h13>
 
 <ul id = "toys">
    <% @toys.each do |c| %>
@@ -24,4 +27,5 @@
 
 
 <% end %>
-<p><%= link_to "Add new Toy", {:action => 'new' }%></p>
+<button type="button" class="btn btn-success"><%= link_to "Add new Toy", {:action => 'new' }%></button>
+<p></p>
